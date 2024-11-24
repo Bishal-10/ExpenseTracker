@@ -1,0 +1,205 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container */
+.container {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Header */
+.header {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #bc9f8b;
+    padding: 10px 20px;
+    
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.logo {
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 52px;
+    margin-right: 190px;
+    position: relative;
+    right: 50px;
+}
+
+.logo img {
+    height: 60px;
+    width: 60px;
+    position: relative;
+    top: 10px;
+    border-radius: 50%;
+}
+
+.user-info {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+
+
+
+.user-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Sidebar Menu */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 200px;
+    height: 100%;
+    background-color: #bca18b;
+    padding-top: 100px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #000;
+    border-bottom: 1px solid #d6c6b3;
+    transition: background-color 0.3s ease;
+}
+.close-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+.menu-item:hover {
+    background-color: #e7d4c5;
+}
+
+.menu-item.logout {
+    margin-top: auto;
+    font-weight: bold;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    flex-grow: 1;
+    background-color: #b5cfb7;
+    padding: 20px;
+}
+
+.summary {
+    flex: 1;
+    padding: 20px;
+}
+
+.summary-box {
+    background-color: #e7e8d8;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    width: 25%; /* Reduced width */
+    margin-left: 300px;
+}
+
+.value {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+/* Transaction Form Section */
+.transaction-form {
+    padding: 20px;
+    background-color: #e7e8d8;
+    border-radius: 20px;
+    text-align: center;
+    height: 450px;
+    margin-top: 50px; /* Moves the form down */
+    width: 30%; /* Reduced width */
+    margin-right: 250px;
+}
+
+.transaction-form h2 {
+    margin-bottom: 20px;
+    text-decoration: underline;
+    font-size: 24px;
+}
+
+.transaction-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.transaction-form label {
+    text-align: left;
+    margin-left: 30px;
+}
+
+.transaction-form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 40px;
+    width: 350px;
+    margin-left: 30px;
+}
+
+.transaction-form button {
+    padding: 10px;
+    font-size: 18px;
+    background-color: #C4E264;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 20px;
+    height: 40px;
+    width: 290px;
+    margin-left: 60px;
+}
+
+.transaction-form button:hover {
+    background-color: #a2c14f;
+}
+.greeting {
+    font-size: 1.3em;
+    font-weight: bold;
+    color:#8de695;
+    text-align: right;
+    
+}
