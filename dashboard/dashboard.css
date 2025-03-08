@@ -1,4 +1,3 @@
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -15,13 +14,13 @@
 
 /* Header */
 .header {
-    height: 120px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #bc9f8b;
     padding: 10px 20px;
-    
+    flex-wrap: wrap; /* Allow wrapping */
 }
 
 .menu-icon {
@@ -56,8 +55,6 @@
     padding-right: 20px;
 }
 
-
-
 .user-icon {
     font-size: 24px;
     cursor: pointer;
@@ -74,7 +71,6 @@
     padding-top: 100px;
     transition: all 0.3s ease-in-out;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-    z-index: 10;
 }
 
 .sidebar.active {
@@ -91,6 +87,7 @@
     border-bottom: 1px solid #d6c6b3;
     transition: background-color 0.3s ease;
 }
+
 .close-icon {
     position: absolute;
     top: 20px;
@@ -98,6 +95,7 @@
     font-size: 24px;
     cursor: pointer;
 }
+
 .menu-item:hover {
     background-color: #e7d4c5;
 }
@@ -117,27 +115,7 @@
     flex-grow: 1;
     background-color: #b5cfb7;
     padding: 20px;
-}
-
-.summary {
-    flex: 1;
-    padding: 20px;
-}
-
-.summary-box {
-    background-color: #e7e8d8;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 18px;
-    width: 25%; /* Reduced width */
-    margin-left: 300px;
-}
-
-.value {
-    font-weight: bold;
-    font-size: 24px;
+    justify-content: center;
 }
 
 /* Transaction Form Section */
@@ -149,7 +127,6 @@
     height: 450px;
     margin-top: 50px; /* Moves the form down */
     width: 30%; /* Reduced width */
-    margin-right: 250px;
 }
 
 .transaction-form h2 {
@@ -169,7 +146,7 @@
     margin-left: 30px;
 }
 
-.transaction-form input {
+.transaction-form input, select {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
@@ -196,10 +173,124 @@
 .transaction-form button:hover {
     background-color: #a2c14f;
 }
+
 .greeting {
     font-size: 1.3em;
     font-weight: bold;
-    color:#8de695;
+    color: white;
     text-align: right;
-    
 }
+
+/* User Sidebar */
+.user-sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Hidden initially */
+    width: 250px;
+    height: 100%;
+    background-color: #bca18b;
+    transition: right 0.3s ease;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    padding-top: 20px;
+    z-index: 10;
+}
+
+.user-sidebar.active {
+    right: 0; /* Make visible */
+}
+
+.user-sidebar .close-icon {
+    position: absolute;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.user-sidebar h2 {
+    margin-top: 25px;
+    font-size: 20px;
+    color: #000;
+    text-align: center;
+    border-bottom: 1px solid #d6c6b3;
+    padding-bottom: 30px;
+}
+
+.user-sidebar .menu-item {
+    display: block;
+    padding: 15px 20px;
+    font-size: 16px;
+    color: #000;
+    border-bottom: 1px solid #d6c6b3;
+}
+
+.user-sidebar .menu-item:hover {
+    background-color: #e7d4c5;
+}
+
+.user-sidebar .delete-account-btn {
+    width: 80%;
+    padding: 10px;
+    margin-left: 25px;
+    background-color: #c44a4a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.user-sidebar .delete-account-btn:hover {
+    background-color: #a33d3d;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    /* Header Adjustments */
+    .header {
+        flex-wrap: wrap; /* Allow wrapping */
+        justify-content: center; /* Center items */
+        height: auto; /* Adjust height dynamically */
+    }
+
+    .logo {
+        font-size: 40px; /* Slightly smaller font size */
+        margin-right: 0; /* Remove large right margin */
+        position: static; /* No relative positioning */
+    }
+
+    .logo img {
+        height: 50px; /* Slightly smaller logo image */
+        width: 50px;
+    }
+
+    .user-info {
+        font-size: 16px; /* Adjust font size */
+    }
+
+    .greeting {
+        font-size: 1.1em; /* Slightly smaller font */
+        text-align: center; /* Center align on smaller screens */
+        width: 100%; /* Full-width for alignment */
+    }
+
+    /* Transaction Form Adjustments */
+    .transaction-form {
+        width: 80%; /* Ensure the form width adjusts */
+        margin: 20px auto; /* Center the form */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .transaction-form input,
+    .transaction-form select {
+        width: 100%; /* Ensure input fields stretch across */
+        font-size: 14px; /* Smaller font size for inputs */
+        margin-left: 0; /* Remove margin-left */
+    }
+
+    .transaction-form button {
+        width: 100%; /* Ensure button takes full width */
+        font-size: 16px; /* Adjust font size */
+        margin-left: 0; /* Remove margin-left */
+    }
+}
+

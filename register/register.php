@@ -16,7 +16,7 @@ session_start();
         <div class="logo">
             <img src="../images/a-minimal-black-and-white-logo-with-a-stylized-ima-ummsoNe7Q1e7eABCChvDoA-dD8ZRugKQgGhmayfYELtBg.jpeg" alt="logo">
         </div>
-        <div class="title">Expense Tracker</div>
+        <a  href="../index.php" style="text-decoration:none"> <div class="title">Expense Tracker</div> </a>
     </div>
 
     <div class="main">
@@ -31,27 +31,22 @@ session_start();
                         <div>
                             <label for="name">Name: </label>
                             <input type="text" name="name" id="name">
-                            <span class="error" id="name-error"></span>
                         </div>
                         <div>
                             <label for="number">Phone Number: </label>
                             <input type="tel" name="number" id="number">
-                            <span class="error" id="number-error"></span>
                         </div>
                         <div>
                             <label for="email">Email: </label>
                             <input type="email" name="email" id="email">
-                            <span class="error" id="email-error"></span>
                         </div>
                         <div>
                             <label for="username">Username: </label>
                             <input type="text" name="username" id="username">
-                            <span class="error" id="username-error"></span>
                         </div>
                         <div>
                             <label for="password">Password: </label>
                             <input type="password" name="password" id="password">
-                            <span class="error" id="password-error"></span>
                         </div>
                         <div>
                             <button type="submit">Register</button>
@@ -69,6 +64,16 @@ session_start();
                 </div>
             </div>
         </div>
+
+        <!-- Error message section (moved here) -->
+        <div class="error-section" id="error-section">
+            <div class="error-message" id="name-error"></div>
+            <div class="error-message" id="number-error"></div>
+            <div class="error-message" id="email-error"></div>
+            <div class="error-message" id="username-error"></div>
+            <div class="error-message" id="password-error"></div>
+        </div>
+
         <div class="right">
             <div class="ellipse-2"></div>
         </div>

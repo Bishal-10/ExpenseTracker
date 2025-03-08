@@ -9,21 +9,13 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="login.css">
-    <style>
-        /* Inline styling for the error message (to supplement existing CSS) */
-        .error-msg {
-            color: red;
-            font-size: 18px;
-            text-align: center;
-            margin-top: 10px;
-        }
-    </style>
+   
 </head>
 
 <body>
     <div class="header">
         <div class="logo"><img src="../images/a-minimal-black-and-white-logo-with-a-stylized-ima-ummsoNe7Q1e7eABCChvDoA-dD8ZRugKQgGhmayfYELtBg.jpeg" alt="logo"></div>
-        <div class="title">Expense Tracker</div>
+       <a  href="../index.php" style="text-decoration:none"> <div class="title">Expense Tracker</div> </a>
     </div>
     <div class="main">
         <div class="left">
@@ -73,7 +65,7 @@ session_start();
             if (errorMessage) {
                 setTimeout(() => {
                     errorMessage.style.display = "none";
-                }, 3000); // 3000 milliseconds = 3 seconds
+                }, 3000); 
             }
         });
     </script>

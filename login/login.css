@@ -6,7 +6,7 @@
 
 .header{
     background-color: #bc9f8b;
-    height: 120px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,10 +24,12 @@
     font-weight: 700;
     color: #000000;
     font-size: 48px;
+    text-decoration: none;
 }
+
 .main{
     background-color: #b5cfb7;
-    height: 575px;
+    height: 595px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,28 +39,28 @@
  .form{
     display: flex;
     width: 400px;
-    height: 490px;
-    padding-top: 25px;
-    padding-left: 20px;
-    line-height: 45px;
+    height: 460px;
+    padding-top: 10px;
+    padding-left: 35px;
+    line-height: 40px;
     background-color: #e7e8d8;
     border-radius: 50px;
     font-family: "Roboto-Bold", Helvetica;
-    font-size: 28px;
+    font-size: 30px;
     position: relative;
-    top: 30px;
+    top: 40px;
     left: 75px;
     
 }  
 label{
     
-    margin-left: 30px;
+    margin-left: 25px;
     
 }
 input[type="text"], input[type="email"], input[type="password"], input[type="number"] {
     width: 80%;
     padding: 10px;
-    margin-left: 30px;
+    margin-left: 25px;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -74,9 +76,10 @@ button{
     text-align: center;
     letter-spacing: 1px;
     line-height: normal;
-    margin-top: 25px;
-    margin-left: 80px;
+    margin-top: 15px;
+    margin-left: 85px;
     border: 0.5px solid black;
+    border-radius: 6px;
 
     
 }
@@ -85,10 +88,10 @@ button{
     margin-bottom: 25px;
 }
 .extra{
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
-    margin-top: 30px;
-    line-height: 45px;
+    margin-top: 20px;
+    line-height: 40px;
 }
 
  
@@ -130,20 +133,12 @@ button{
     left: 360px;
     background-color: #e7e8d8;
 }
-/* Style for error message */
-.error-msg {
-    color: red;
-    font-size: 18px;
-    text-align: center;
-    margin-top: 10px;
-}
 
-/* Specific styling for error messages */
 .form .error-msg {
     color: red;
     font-size: 18px;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 

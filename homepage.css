@@ -1,0 +1,361 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Section */
+.header {
+  background-color: #bc9f8b;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+ 
+  padding: 0 50px; /* Added padding for better alignment */
+}
+
+.heads {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin-right: 15px; /* Adjusted margin */
+}
+
+.title {
+  font-family: "Roboto-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 48px;
+}
+
+.signIn {
+  display: flex;
+  align-items: center;
+}
+
+.signIn button {
+  border: 0.5px solid black;
+  height: 50px;
+  width: 150px;
+  border-radius: 15px;
+  color: #4C2D2D;
+  background-color: #C4E264;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Roboto-Bold", Helvetica;
+  margin-left: 20px; /* Adjust margin to place button properly */
+}
+
+/* Main section */
+.main {
+  background-color: #b5cfb7;
+  height: auto; /* Allow dynamic content height */
+  display: flex;
+  flex-direction: row; /* Ensure left and right sections are side by side */
+  padding: 40px;
+  overflow: hidden;
+}
+
+/* Left section */
+.left {
+  width: 45%;
+  height: auto; /* Allow content to expand dynamically */
+  border-right: 3px solid #bc9f8b;
+  display: flex;
+  flex-direction: column; /* Stack items in left section */
+  justify-content: flex-start;
+}
+
+.card-1 img {
+  height: 350px;
+  width: 100%; /* Make image responsive */
+  max-width: 400px; /* Limit max width for image */
+  border-radius: 15px;
+  margin-left: 120px; 
+  margin-top: 15px;
+  opacity: 70%;
+}
+
+.left-content {
+  font-family: "Roboto-Bold", Helvetica;
+  font-size: 35px;
+  color: #1D5421;
+  font-weight: bolder;
+  margin-top: 20px;
+  height: 60px;
+  text-align: center;
+  margin-right: 5px;
+}
+
+.startBtn {
+  height: 90px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.startBtn button {
+  height: 50px;
+  width: 300px;
+  border-radius: 15px;
+  color: #4C2D2D;
+  background-color: #C4E264;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Roboto-Bold", Helvetica;
+  border: 0.5px solid black;
+  margin-right: 40px;
+}
+
+/* Right section */
+.right {
+  width: 55%;
+  display: flex;
+  flex-direction: column; /* Stack items in right section */
+}
+
+.description {
+  height: 130px;
+  margin: 0px;
+  text-align: center;
+  font-family: "Roboto-Bold", Helvetica;
+  font-size: 36px;
+  font-weight: bolder;
+  color: #073A0A;
+  width: 100%;
+  position: relative;
+  left: 0px;
+}
+
+.services {
+  height: 70px;
+  text-align: center;
+  font-size: 42px;
+  color: #A7551B;
+  font-weight: bolder;
+  font-family: "Roboto-Bold", Helvetica;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 0 50px;
+}
+
+.cards img {
+  border-radius: 30px;
+  opacity: 70%;
+  width: 48%; /* Ensure the images are smaller and fit side by side */
+  margin-bottom: 10px;
+}
+
+/* Info Section */
+.info-section {
+  background-color: #b5cfb7;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 40px 0;
+  border-top: 3px solid #bc9f8b;
+}
+
+.about-us,
+.contact {
+  width: 45%;
+  height: 175px;
+  background-color: #e7e8d8;
+  padding: 20px;
+  border-radius: 15px;
+  font-family: "Roboto-Bold", Helvetica;
+  font-size: 20px;
+  color: #1d5421;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 28px;
+  color: #073a0a;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+p {
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+/* Footer */
+.footer {
+  background-color: #bc9f8b;
+  text-align: center;
+  padding: 20px 0;
+  font-family: "Roboto-Bold", Helvetica;
+  font-size: 18px;
+  color: #4C2D2D;
+  border-top: 2px solid #e7e8d8;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+  .header {
+      flex-direction: column;
+      padding: 10px;    
+      align-items: flex-start;
+  }
+
+  .title {
+      font-size: 36px;
+      position: static;
+      margin-top: 10px;
+  }
+
+  .logo img {
+      height: 50px;
+      width: 50px;
+  }
+
+  .signIn button {
+    position: absolute;
+    top: 0px;
+    left: 360px;
+     
+    margin-top: 15px;
+      width: 20%;
+     
+  }
+
+  .main {
+      flex-direction: column;
+      padding: 20px;
+  }
+
+  .left,
+  .right {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+  .left{
+    margin-left: 20px;
+  }
+
+  .left img {
+      width: 60%;
+      height: auto;
+      margin-left: 20%;
+  }
+
+  .description {
+      width: 100%;
+      font-size: 28px;
+      left: 0;
+  }
+
+  .startBtn button {
+      margin-top: 30px;
+      width: 100%;
+      font-size: 18px;
+  }
+
+  .cards {
+      flex-direction: column;
+      margin-top: 20px;
+  }
+
+  .cards img {
+    margin-top: 15px;
+      width: 90%; /* Ensuring the images fit on smaller screens */
+      height: 80%px;
+      margin-left: 20px;
+  }
+
+  .info-section {
+      flex-direction: column;
+      align-items: center;
+  } 
+
+  .about-us, .contact {
+      height: 200px;
+      width: 90%;
+      margin-bottom: 20px;
+  }
+
+  .footer {
+      font-size: 16px;
+  }
+}
+
+/* For mobile screens */
+/* @media (max-width: 480px) {
+  .header {
+      padding: 10px;
+  }
+
+  .title {
+      font-size: 30px;
+  }
+
+  .logo img {
+      height: 40px;
+      width: 40px;
+  }
+
+  .signIn button {
+      width: 100%;
+  }
+
+  .main {
+      padding: 10px;
+  }
+
+  .left, .right {
+      width: 100%;
+  }
+
+
+
+  .description {
+      width: 100%;
+      font-size: 24px;
+  }
+
+  .startBtn button {
+      width: 100%;
+      font-size: 16px;
+  }
+
+  .cards img {
+      width: 100%;
+  }
+
+  .info-section {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .about-us, .contact {
+      width: 90%;
+      margin-bottom: 20px;
+  }
+
+  .footer {
+      font-size: 14px;
+  }
+} */

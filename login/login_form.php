@@ -11,7 +11,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     $password = mysqli_real_escape_string($con, $_POST['password']);
 
     // Query to find user with matching username and password
-    $query = "SELECT * FROM register WHERE username = '$username' AND password = '$password'";
+    $query = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
     $result = mysqli_query($con, $query);
 
     if (mysqli_num_rows($result) > 0) {
